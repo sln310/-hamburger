@@ -1,0 +1,252 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "inter";
+  font-size: 1.6rem;
+  color: #707070;
+  background-color: fffff;
+}
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+
+/*
+----------------------
+Start ハンバーガーメニュー
+----------------------
+*/
+.header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 60px;
+  background-color: #1e1e1e;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  z-index: 10;
+}
+.headerNavOuter {
+  margin-bottom: 0;
+  position: relative;
+}
+.siteIcon {
+  margin: 0;
+}
+.siteIcon img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Start ナビゲーション */
+.headerNav {
+  position: fixed;
+  right: -250px; /*右側に隠しておく*/
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  /* padding-top: 40px; */
+  background-color: #1e1e1e;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  z-index: 20;
+  overflow-y: auto;
+}
+.navList {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: block;
+}
+.categories {
+  padding: 1rem 1rem 0;
+}
+.categories a {
+  font-size: 25px;
+  display: block;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 3 0 1rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.categories a1 {
+  display: block;
+  border-bottom: 3px solid #f20c0c;
+  color: #707070;
+  padding: 4rem 0 1rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.categories a2 {
+  display: block;
+  border-bottom: 3px solid #9634f8;
+  color: #707070;
+  padding: 4rem 0 1rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.categories a3 {
+  display: block;
+  border-bottom: 3px solid #34f8ec;
+  color: #707070;
+  padding: 4rem 0 1rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.categories a4 {
+  display: block;
+  border-bottom: 3px solid #dcf834;
+  color: #707070;
+  padding: 4rem 0 1rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.categories a5 {
+  display: block;
+  border-bottom: 3px solid #f8a934;
+  color: #707070;
+  padding: 4rem 0 1rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.categories a6 {
+  display: block;
+  border-bottom: 3px solid #f8a934;
+  color: #707070;
+  padding: 4rem 0 1rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* End ナビゲーション */
+
+/* Start ハンバーガーボタン(三本線の実装) */
+.hamburger_btn {
+  position: absolute; /*.headerNavOuterを基準にして、絶対配置*/
+  right: 0;
+  top: 0;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  z-index: 30;
+}
+.hamburger_line {
+  position: absolute; /*.headerNavOuterを基準にして、絶対配置*/
+  left: 8px;
+  width: 25px;
+  height: 3px;
+  background-color: #fb41ff;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+.hamburger_line_1 {
+  top: 20px;
+}
+.hamburger_line_2 {
+  top: 26px;
+}
+.hamburger_line_3 {
+  top: 32px;
+}
+/* End ハンバーガーボタン(三本線の実装) */
+
+/* Start ハンバーガーボタンをクリックした際の動き */
+/* ナビゲーションが現れる */
+.nav-open .headerNav {
+  right: 0;
+}
+
+/* 三本線のハンバーガーを、❌にします */
+.nav-open .hamburger_line_1 {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 25px;
+}
+.nav-open .hamburger_line_2 {
+  width: 0;
+  left: 50%;
+}
+.nav-open .hamburger_line_3 {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 25px;
+}
+/* End ハンバーガーボタンをクリックした際の動き */
+/*
+----------------------
+End ハンバーガーメニュー
+----------------------
+*/
+
+/* 
+---------------------- 
+Start main
+---------------------- 
+*/
+.sectionWrapper {
+  padding: 80px 0;
+}
+.section_title_group {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-size: 2.8rem;
+}
+.section_title {
+  margin: 10px 0;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 3px;
+}
+.section_title_group .section_title span {
+  padding: 8px;
+}
+.section_title:before {
+  content: "";
+  border-bottom: 3px solid #1ea8e4;
+  bottom: 0;
+  height: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+.section_title:after {
+  border-bottom: 3px solid #ddd;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  width: 800px;
+  z-index: 1;
+}
+.leadCopy {
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 3rem 0;
+  line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+  .leadCopy {
+    width: 95%;
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+/* 
+---------------------- 
+End main
+---------------------- 
+*/
